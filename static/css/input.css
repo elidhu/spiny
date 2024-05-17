@@ -79,7 +79,7 @@
     }
 
     p {
-      @apply text-base text-neutral leading-relaxed my-4;
+      @apply text-neutral leading-relaxed my-4;
     }
 
     a {

@@ -5,13 +5,39 @@
   {% set current_lang = section.lang %}
 {% endif %}
 {% if config.extra.header_nav %}
-<nav id="nav-bar" class="bg-neutral p-4 flex justify-center space-x-4 text-2xl">
-  {% for nav_item in config.extra.header_nav %}
-    <a href="{{ nav_item.url }}" class="link link-hover link-accent font-bold">
-      {% set language_key = 'name_' ~ current_lang %}
-      {{ nav_item[language_key] }}
-    </a>
-  {% endfor %}
-</nav>
+<div class="navbar bg-neutral flex justify-center space-x-4 text-2xl">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </div>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        {% for nav_item in config.extra.header_nav %}
+          <li>
+            <a href="{{ nav_item.url }}" class="link link-hover link-accent font-bold text-neutral text-2xl">
+              {% set language_key = 'name_' ~ current_lang %}
+              {{ nav_item[language_key] }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+        {% for nav_item in config.extra.header_nav %}
+          <li>
+            <a href="{{ nav_item.url }}" class="link link-hover link-accent font-bold text-2xl">
+              {% set language_key = 'name_' ~ current_lang %}
+              {{ nav_item[language_key] }}
+            </a>
+          </li>
+        {% endfor %}
+    </ul>
+  </div>
+  <div class="navbar-end">
+  </div>
+</div>
+
 {% endif %}
 
