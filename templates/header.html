@@ -14,7 +14,7 @@
       <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         {% for nav_item in config.extra.header_nav %}
           <li>
-            <a href="{{ nav_item.url }}" class="link link-hover link-accent font-bold text-neutral text-2xl">
+            <a href="{{ nav_item.url }}" class="link link-hover link-secondary font-bold text-primary text-2xl">
               {% set language_key = 'name_' ~ current_lang %}
               {{ nav_item[language_key] }}
             </a>
