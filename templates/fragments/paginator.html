@@ -1,0 +1,17 @@
+{% if paginator %}
+<div class="accent-data mt-8 flex justify-between">
+  {% if paginator.previous %}
+    <a href="{{ paginator.first }}" class="btn btn-ghost">&lt;&lt; First</a>
+    <a href="{{ paginator.previous }}" class="btn btn-ghost">&lt; Previous</a>
+  {% else %}
+    <span></span>
+  {% endif %}
+  <span>{{ paginator.current_index }} / {{ paginator.number_pagers }}</span>
+  {% if paginator.next %}
+    <a href="{{ paginator.next }}" class="btn btn-ghost">Next &gt;</a>
+    <a href="{{ paginator.last }}" class="btn btn-ghost">Last &gt;&gt;</a>
+  {% else %}
+    <span></span>
+  {% endif %}
+</div>
+{% endif %}

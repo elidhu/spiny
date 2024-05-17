@@ -24,21 +24,6 @@
 {% endfor %}
 </ul>
 
-{% if paginator %}
-<div class="accent-data mt-8 flex justify-between">
-  {% if paginator.previous %}
-    <a href="{{ paginator.first }}" class="btn btn-ghost">⥶</a>
-    <a href="{{ paginator.previous }}" class="btn btn-ghost">Previous</a>
-  {% else %}
-    <span></span>
-  {% endif %}
-  <span>{{ paginator.current_index }} / {{ paginator.number_pagers }}</span>
-  {% if paginator.next %}
-    <a href="{{ paginator.next }}" class="btn btn-ghost">Next</a>
-    <a href="{{ paginator.last }}" class="btn btn-ghost">⥸</a>
-  {% else %}
-    <span></span>
-  {% endif %}
-</div>
-{% endif %}
+{% include "fragments/paginator.html" %}
+
 {% endblock content %}
