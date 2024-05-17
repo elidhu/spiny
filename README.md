@@ -2,12 +2,12 @@
 
 Introducing "Spiny," a minimalist [Zola](https://www.getzola.org) theme.
 
-| Originally inspired by [Anemone](https://github.com/Speyll/anemone) for the template. It is now however, very different and specific for my needs - you may find it useful too.
+> Originally inspired by [Anemone](https://github.com/Speyll/anemone) for the template. It is now however, very different and specific for my needs - you may find it useful too.
 
 <!-- You can browse the demo website [here](https://spiny.pages.dev/) -->
-<!-- I also use it on my own [website.](https://elidhu.com) -->
+<!-- I also use it on my own [website](https://elidhu.com). -->
 
-Spiny is a versatile Zola theme that comes with both light and dark variants. You can easily switch between the light and dark themes to suit your preferences.
+Spiny is a versatile Zola theme that is backed by tailwindcss. It will switch between light and dark themes based on the user's system preference.
 
 ## Installation
 
