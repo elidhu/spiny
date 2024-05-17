@@ -1,25 +1,18 @@
-base_url = "https://anemone.pages.dev"
-title = "anemone"
-description = "A minimalist Zola theme that prioritizes clean CSS and avoids heavy JavaScript. Enjoy a seamless user experience with lightning-fast load times. Let your content take center stage in a clutter-free, elegant design that enhances readability. Responsive and efficient, anemone brings focus to your ideas."
+base_url = "https://spiny.pages.dev"
+title = "spiny"
+description = "A minimalist Zola theme"
 compile_sass = false
 minify_html = true
 generate_feed = true
 default_language = "en"
 
-taxonomies = [
-    {name = "tags", feed = true},
-]
-
-[languages.fr]
-weight = 2
-languageName = "Français"
-languageCode = "fr"
+taxonomies = [{ name = "tags", feed = true }]
 
 [markdown]
 render_emoji = true
 external_links_target_blank = true
 smart_punctuation = true
-highlight_code = false
+highlight_code = true
 highlight_theme = "gruvbox-dark"
 
 [slugify]
@@ -31,23 +24,27 @@ anchors = "on"
 internal_level = "warn"
 
 [extra]
-author = "Speyll"
-display_author = true
+# List pages on the index page
+list_pages = true
 
-favicon = "favicon.ico"
-image = ""
+# The author of the site, and all the articles
+author = "elidhu"
 
+# Default theme
 default_theme = "light"
-list_pages = false
-twitter_card = true
 
+# Favicon
+favicon = "logo.svg"
+
+# Configure the navigation links in the Navbar
 header_nav = [
-  { url = "/", name_en = "/home/", name_fr = "/accueil/" },
-  { url = "/about", name_en = "/about/", name_fr = "/concernant/" },
-  { url = "/journal", name_en = "/journal/", name_fr = "/journal/" },
-  { url = "/blog", name_en = "/blog/", name_fr = "/blog/" }
+  { url = "/", name_en = "/home/" },
+  { url = "/about", name_en = "/about/" },
+  { url = "/journal", name_en = "/journal/" },
+  { url = "/articles", name_en = "/articles/" },
 ]
 
-# Optional footer license text. It will only show, when using footer_content_license.
-#footer_content_license = "Creative Commons Attribution 4.0 International"
-#footer_content_license_link = "https://creativecommons.org/licenses/by/4.0/"
+# Configure the social links in the footer
+[extra.social]
+github = "https://github.com/elidhu"
+email = "email@elidhu.com"

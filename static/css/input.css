@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-sans;
+  }
+
+  h1 {
+    @apply mt-8 mb-4 text-4xl font-bold leading-tight text-primary;
+  }
+
+  h2 {
+    @apply mt-6 mb-3 text-3xl font-semibold leading-snug text-primary;
+  }
+
+  h3 {
+    @apply mt-5 mb-2 text-2xl font-medium leading-normal text-secondary;
+  }
+
+  h4 {
+    @apply mt-4 mb-2 text-xl font-medium leading-normal text-secondary;
+  }
+
+  h5 {
+    @apply mt-3 mb-1 text-lg font-medium leading-normal text-secondary;
+  }
+
+  h6 {
+    @apply mt-2 mb-1 text-base font-medium leading-normal text-secondary;
+  }
+
+  h1::before {
+    content: '# ';
+    @apply mr-2 text-gray-500;
+  }
+
+  h2::before {
+    content: '## ';
+    @apply mr-2 text-gray-500;
+  }
+
+  h3::before {
+    content: '### ';
+    @apply mr-2 text-gray-500;
+  }
+
+  h4::before {
+    content: '#### ';
+    @apply mr-2 text-gray-500;
+  }
+
+  h5::before {
+    content: '##### ';
+    @apply mr-2 text-gray-500;
+  }
+
+  h6::before {
+    content: '###### ';
+    @apply mr-2 text-gray-500;
+  }
+
+  .title-list a {
+    @apply text-primary link link-secondary;
+  }
+
+  article {
+    ul {
+      @apply list-disc list-inside space-y-2;
+    }
+
+    ol {
+      @apply list-decimal list-inside space-y-2;
+    }
+
+    li {
+      @apply mb-1 pl-4;
+    }
+
+    p {
+      @apply text-base text-neutral leading-relaxed my-4;
+    }
+
+    a {
+      @apply text-primary link link-secondary;
+    }
+
+    blockquote {
+      @apply border-l-4 border-primary pl-4 italic text-neutral;
+    }
+
+    figure,
+    pre,
+    table {
+      @apply overflow-x-auto;
+    }
+
+    pre {
+      @apply p-4;
+      overflow: auto;
+    }
+
+    pre[data-linenos] {
+      @apply py-4;
+    }
+
+    pre table td {
+      @apply p-0;
+    }
+
+    pre table td:nth-of-type(1) {
+      @apply text-center select-none;
+    }
+
+    pre mark {
+      display: block;
+      background-color: rgba(254, 252, 232, 0.9);
+    }
+
+    pre table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    pre {
+      @apply rounded-md;
+    }
+
+    code {
+      @apply text-sm font-code;
+    }
+  }
+}

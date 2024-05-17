@@ -1,5 +1,6 @@
 +++
-title = "Personal journal"
+title = "Journal"
+description = "A log of small things"
 date = 2019-10-05
 draft = false
 +++

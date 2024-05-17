@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mt-4 mb-8">
+  <a href=".." class="text-primary link link-secondary">..</a>/<span class="font-bold">{{ page.slug }}</span>
+</div>
+
+<h1 class="text-4xl font-bold leading-tight mb-2">{{ page.title }}</h1>
+
+<time datetime="{{ page.date }}" class="block text-sm font-semibold">
+  Published on: <span class="font-bold">{{ page.date }}</span>
+</time>
+{% if config.extra.author %}
+<address rel="author" class="not-italic text-sm">By <span class="font-bold">{{ config.extra.author }}</span></address>
+{% endif %}
+
+{% if page.extra.repo_link %}
+<p class="mt-8">
+  <a href="{{ page.extra.repo_link }}" class="inline-block bg-secondary px-3 py-1 rounded-full text-base-100 text-sm font-medium hover:link-hover">Take me straight to the code</a>
+<p>
+{% endif %}
+
+{% include "fragments/toc.html" %}
+
+<article class="prose lg:prose-xl max-w-none">
+  {{ page.content | safe }}
+</article>
+
+{% include "fragments/tags.html" %}
+
+{% endblock content %}

@@ -65,20 +65,6 @@
 {% if image %}
 <meta property="og:image" content="{{ image }}">
 {% endif %}
-{% set twitter_card = config.extra.twitter_card | default(value=true) %}
-{% if twitter_card != false %}
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="{{ url | safe }}">
-{% if title %}
-<meta property="twitter:title" content="{{ title }}">
-{% endif %}
-{% if description %}
-<meta property="twitter:description" content="{{ description }}">
-{% endif %}
-{% if image %}
-<meta property="twitter:image" content="{{ image }}">
-{% endif %}
-{% endif %}
 <link rel="canonical" href="{{ url | safe }}">
 {% if image %}
 <link rel="shortcut icon" type="image/x-icon" href="{{ get_url(path=config.extra.favicon, trailing_slash=false) }}">
@@ -90,9 +76,9 @@
 {% endblock feed %}
 {% endif %}
 {% block css %}
-<link rel="stylesheet" type="text/css" href="https://speyll.github.io/suCSS/reset-min.css"/>
-<link rel="stylesheet" type="text/css" href="https://speyll.github.io/suCSS/suCSS-min.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/style.css', trailing_slash=false) | safe }}"/>
 {% endblock css %}
-<script src="{{ get_url(path='js/script.js', trailing_slash=false) | safe }}" defer></script>
 

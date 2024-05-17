@@ -1,23 +1,30 @@
-<hr>
-<div id="footer-container">
-  {% if config.extra.footer_content_license %}
-    <div>Except where otherwise noted, content on this site is licensed under a 
-    {% if config.extra.footer_content_license_link %}
-    <a target="_blank" rel="noopener noreferrer" href="{{config.extra.footer_content_license_link}}">{{config.extra.footer_content_license}}</a>
-    {% else %}
-    {{config.extra.footer_content_license}}
+<div id="footer-container" class="space-y-4 text-center p-4 bg-neutral text-base-100">
+  <div class="grid grid-flow-col justify-center space-x-4">
+    <!-- Github Link -->
+    {% if config.extra.social.github %}
+    <a href="{{ config.extra.social.github }}" target="_blank" rel="noopener noreferrer" class="link link-accent">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-none" viewBox="0 0 48 48" stroke-width="1.5" stroke="currentColor"><path d="M29.3444 30.4765C31.7481 29.977 33.9292 29.1108 35.6247 27.8391C38.5202 25.6676 40 22.3136 40 18.9999C40 16.6752 39.1187 14.505 37.5929 12.6668C36.7427 11.6425 39.2295 3.99989 37.02 5.02919C34.8105 6.05848 31.5708 8.33679 29.8726 7.83398C28.0545 7.29565 26.0733 6.99989 24 6.99989C22.1992 6.99989 20.4679 7.22301 18.8526 7.6344C16.5046 8.23237 14.2591 5.99989 12 5.02919C9.74086 4.05848 10.9736 11.9632 10.3026 12.7944C8.84119 14.6051 8 16.7288 8 18.9999C8 22.3136 9.79086 25.6676 12.6863 27.8391C14.6151 29.2857 17.034 30.2076 19.7401 30.6619" stroke="currentColor" stroke-width="4" stroke-linecap="butt"></path><path d="M19.7397 30.6619C18.5812 31.937 18.002 33.1478 18.002 34.2944C18.002 35.441 18.002 38.3464 18.002 43.0106" stroke="currentColor" stroke-width="4" stroke-linecap="butt"></path><path d="M29.3446 30.4766C30.4423 31.9174 30.9912 33.211 30.9912 34.3576C30.9912 35.5042 30.9912 38.3885 30.9912 43.0107" stroke="currentColor" stroke-width="4" stroke-linecap="butt"></path><path d="M6 31.2155C6.89887 31.3254 7.56554 31.7387 8 32.4554C8.65169 33.5303 11.0742 37.518 13.8251 37.518C15.6591 37.518 17.0515 37.518 18.0024 37.518" stroke="currentColor" stroke-width="4" stroke-linecap="butt"></path></svg>
+    </a>
     {% endif %}
-    license.</div>
-  {% endif %}
-  <div>
-    <p>Theme and color theme licensed under <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Licence_MIT">MIT</a>.<br>
-      Built with <a target="_blank" rel="noopener noreferrer" href="https://www.getzola.org">Zola</a> using <a target="_blank" rel="noopener noreferrer" href="https://github.com/Speyll/anemone">anemone</a> theme, <a target="_blank" rel="noopener noreferrer" href="https://speyll.github.io/suCSS/">suCSS</a> framework &amp; <a target="_blank" rel="noopener noreferrer" href="https://github.com/Speyll/veqev">veqev</a>.<br>
-    </p>
+    <!-- Email Link -->
+    {% if config.extra.social.email %}
+    <a href="mailto:{{ config.extra.social.email }}" target="_blank" rel="noopener noreferrer" class="link link-accent">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25" /></svg>
+    </a>
+    {% endif %}
+    <!-- RSS Link -->
+    {% if config.generate_feed %}
+    <a href="{{ get_url(path='atom.xml', trailing_slash=false) }}" target="_blank" rel="noopener noreferrer" class="link link-accent">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" /></svg>
+    </a>
+    {% endif %}
+  </div>
 
-  </div>
-  {% if config.generate_feed %}
-  <div>
-    <a class="no-style" target="_blank" rel="noopener noreferrer" href="{{ get_url(path="atom.xml", trailing_slash=false) }}" title="Subscribe via RSS for updates."><svg class="icons"><use href="{{ get_url(path='icons.svg#rss', trailing_slash=false) | safe }}"></use></svg></a>
-  </div>
-  {% endif %}
+  <p class="text-sm text-base-100">
+    <span class="font-medium">Powered by</span>
+    <a class="link link-accent font-bold" target="_blank" rel="noopener noreferrer" href="https://www.getzola.org">Zola</a>,
+    <span class="font-medium">using the</span>
+    <a class="link link-accent font-bold" target="_blank" rel="noopener noreferrer" href="https://github.com/elidhu/spiny">Spiny</a>
+    <span class="font-medium">theme.</span>
+  </p>
 </div>

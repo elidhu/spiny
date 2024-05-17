@@ -3,16 +3,18 @@
 <head>
     {% include "head.html" %}
 </head>
-<body>
-      <header>
-          {% include "header.html" %}
-      </header>
-      <main>
-          {% block content %}
-          {% endblock content %}
-      </main>
-      <footer>
-          {% include "footer.html" %}
-      </footer>
+<body class="bg-base-100 text-neutral flex flex-col min-h-screen overflow-y-scroll">
+    <header class="p-4 bg-neutral text-base-100">
+        {% include "header.html" %}
+    </header>
+    <main class="flex-grow">
+        <div class="container mx-auto px-4 py-8 max-w-4xl">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </main>
+    <footer class="p-4 bg-neutral text-base-100">
+        {% include "footer.html" %}
+    </footer>
 </body>
 </html>

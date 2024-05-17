@@ -1,13 +1,32 @@
-name = "anemone"
-description = "A minimalist Zola theme that prioritizes clean CSS and avoids heavy JavaScript. Enjoy a seamless user experience with lightning-fast load times. Let your content take center stage in a clutter-free, elegant design that enhances readability. Responsive and efficient, anemone brings focus to your ideas."
+name = "Spiny"
+description = "A minimalist Zola theme"
 license = "MIT"
-homepage = "https://github.com/Speyll/anemone"
+homepage = "https://github.com/elidhu/spiny"
 min_version = "0.4.0"
-demo = "https://anemone.pages.dev"
+demo = ""
 
 [extra]
+# List pages on the index page
+list_pages = true
 
+# The author of the site, and all the articles
+author = "elidhu"
 
-[author]
-name = "Speyll"
-homepage = "https://speyllsite.pages.dev/"
+# Default theme
+default_theme = "light"
+
+# Favicon
+favicon = "logo.svg"
+
+# Configure the navigation links in the Navbar
+header_nav = [
+  { url = "/", name_en = "/home/" },
+  { url = "/about", name_en = "/about/" },
+  { url = "/journal", name_en = "/journal/" },
+  { url = "/articles", name_en = "/articles/" },
+]
+
+# Configure the social links in the footer
+[extra.social]
+github = "https://github.com/elidhu"
+email = "email@elidhu.com"

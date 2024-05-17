@@ -1,0 +1,30 @@
+{% if page.toc and page.extra.toc %}
+<div class="toc bg-base-100 rounded">
+  <h2>Table of contents</h2>
+  <ul class="list-inside space-y-2">
+    {% for h1 in page.toc %}
+    <li>
+      <a href="{{ h1.permalink | safe }}" class="text-primary link link-secondary">{{ h1.title }}</a>
+      {% if h1.children %}
+      <ul class="list-inside space-y-2 pt-2 ml-4">
+        {% for h2 in h1.children %}
+        <li>
+          <a href="{{ h2.permalink | safe }}" class="text-primary link link-secondary">{{ h2.title }}</a>
+          {% if h2.children %}
+          <ul class="list-inside space-y-2 pt-2 ml-4">
+            {% for h3 in h2.children %}
+            <li>
+              <a href="{{ h3.permalink | safe }}" class="text-primary link link-secondary">{{ h3.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

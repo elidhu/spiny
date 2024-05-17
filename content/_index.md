@@ -1,21 +1,22 @@
 +++
+[extra]
+image = "/logo.svg"
 +++
 
 ## Overview
 
-anemone theme is designed to provide a nearly no-JavaScript, efficient, and minimalist experience for your website. Embracing simplicity, the theme focuses on content and readability, ensuring a seamless user experience without unnecessary distractions.
+Spiny is a simple theme, designed to be minimalistic. It sacrifices configurability for simplicity, and is perfect for those who want a no-nonsense theme.
 
 > *"Useless blockquote"*
 
-## Blog Posts
+## Articles
 
-Explore our insightful blog posts on a variety of topics:
+Explore our insightful articles posts on a variety of topics:
 
-- 🥣 [Overview Post](./blog/overview-post)
-- 🥣 [Overview Post But in French](./fr/blog/overview-post)
-- 🈚 [Language Tests](./blog/language-tests)
-- 🔥 [Very Very Very Long Title And Very Very Very Short Content](./blog/very-very-very-long-title-and-very-very-very-short-content)
-- 📺 [Post Example With Headings And TOC](./blog/post-example-with-headings-and-toc)
+- 🥣 [Overview Post](./articles/overview-post)
+- 🈚 [Language Tests](./articles/language-tests)
+- 🔥 [Very Very Very Long Title And Very Very Very Short Content](./articles/very-very-very-long-title-and-very-very-very-short-content)
+- 📺 [Post Example With Headings And TOC](./articles/post-example-with-headings-and-toc)
 
 ## Tags
 
@@ -34,15 +35,9 @@ Discover additional content:
 
 ## Online Presence
 
-Stay connected with us:
+Get in touch
 
-- Email: [jgll6dij6@mozmail.com](mailto:jgll6dij6@mozmail.com)
-- Code Repositories: [Speyll@GitHub](https://github.com/Speyll)
-- @Speyll anywhere else.
+- Email: [email@elidhu.com](mailto:email@elidhu.com)
+- Code Repositories: [elidhu@GitHub](https://github.com/elidhu)
+- @elidhu anywhere else.
 
-## Webrings
-
-Join our webrings and explore more:
-
-- 🈯 {{ webring(prev="#", webring="#", webringName="Random Webring", next="#") }}
-- 🎶 {{ webring(prev="#", webring="#", webringName="Another Webring", next="#") }}

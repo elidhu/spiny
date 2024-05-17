@@ -1,0 +1,8 @@
+<p class="mt-8">
+  {% if page.taxonomies.tags %}
+  <span class="font-semibold px-3">Tags:</span>
+  {% for tag in page.taxonomies.tags %}
+  <a href="/tags/{{ tag | slugify }}" class="inline-block bg-secondary px-3 py-1 mr-2 mb-2 rounded-full text-base-100 text-sm font-medium hover:link-hover">{{ tag }}</a>
+  {% endfor %}
+  {% endif %}
+</p>
